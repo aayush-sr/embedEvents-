@@ -32,11 +32,11 @@ const embed = new LiveboardEmbed('#embed', {
   /*param-start-liveboardId*/
   // vizId: "1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6",
 })
-.on(EmbedEvent.Pin, payload => {
-  console.log(payload);
-})
-.render();
+  .on('copyLink', (payload) => {
+    console.log(payload);
+  })
+  .render();
 
-document.getElementById('button1').addEventListener('click', () => {
-  embed.trigger('pin', {vizId: '730496d6-6903-4601-937e-2c691821af3c'});
-});
+// document.getElementById('button1').addEventListener('click', () => {
+//   embed.trigger('pin', {vizId: '730496d6-6903-4601-937e-2c691821af3c'});
+// });
