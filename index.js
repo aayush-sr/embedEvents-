@@ -32,9 +32,18 @@ const embed = new LiveboardEmbed('#embed', {
   /*param-start-liveboardId*/
   // vizId: "1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6",
 })
-  .on('copyLink', (payload) => {
+  .on(
+    EmbedEvent.ALL,
+    (payload) => {
+      console.log(payload);
+    },
+    { start: true }
+  )
+
+  .on(EmbedEvent.ALL, (payload) => {
     console.log(payload);
   })
+
   .render();
 
 // document.getElementById('button1').addEventListener('click', () => {
