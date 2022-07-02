@@ -1,7 +1,3 @@
-// Import stylesheets
-import './style.css';
-
-// Import ThoughtSpot SDK
 import {
   init,
   LiveboardEmbed,
@@ -26,10 +22,7 @@ const embed = new LiveboardEmbed('#embed', {
   frameParams: { height: '100vh' },
   disabledActions: [Action.ShowUnderlyingData],
   liveboardId:
-    '33248a57-cc70-4e39-9199-fb5092283381' /*param-end-liveboardFullHeight*/ /*param-end-modifyActions*/ /*param-end-liveboardId*/ /*param-end-runtimeFilters*/,
-  /*param-start-liveboardFullHeight*/
-  /*param-start-modifyActions*/
-  /*param-start-liveboardId*/
+    '33248a57-cc70-4e39-9199-fb5092283381' /*param-end-runtimeFilters*/,
   // vizId: "1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6",
 })
   .on(
@@ -39,11 +32,9 @@ const embed = new LiveboardEmbed('#embed', {
     },
     { start: true }
   )
-
   .on(EmbedEvent.ALL, (payload) => {
     console.log(payload);
   })
-
   .render();
 
 // document.getElementById('button1').addEventListener('click', () => {
